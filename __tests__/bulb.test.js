@@ -17,7 +17,7 @@ describe('Bulb', () => {
         const bulb = new Bulb();
         expect(bulb.shelfLife).toBe(5);
     });
-    
+
     test('has a shelfLife of 4 after being switched on once', () =>{
         const bulb = new Bulb();
         bulb.electrify();
