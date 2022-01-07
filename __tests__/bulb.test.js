@@ -1,21 +1,27 @@
 const Bulb = require('../src/bulb.js');
+//const Lamp = require('../src/lamp.js');
+
+const lamp = {
+    bulb: new Bulb(),
+    isOn: false
+};
 
 describe('Bulb', () => {
 
-    test('creates an instance of Bulb', () => {
+    test('Creates an instance of Bulb', () => {
         const bulb = new Bulb();
         expect(bulb).toBeInstanceOf(Object);
     });
 
-    test('has a default shelfLife of 5', () => {
+    test('Has a default shelfLife of 5', () => {
         const bulb = new Bulb();
         expect(bulb.shelfLife).toBe(5);
     });
-
-    // test('electrify', () => {
-    // test('see how long the bulb lasts', () =>{
-
-    // expect()
-    // })
+    
+    test('has a shelfLife of 4 after being switched on once', () =>{
+        const bulb = new Bulb();
+        bulb.electrify();
+        expect(bulb.shelfLife).toBe(4);
+     });
+     
 });
-

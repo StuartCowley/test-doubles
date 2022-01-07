@@ -3,8 +3,12 @@ class Bulb {
       this.shelfLife = 5;
     }
 
+    get isWorking() {
+      this.shelfLife > 0;
+    }
+    
     electrify() {
-
+      this.shelfLife -= 1;
     }
 }
 
