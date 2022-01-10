@@ -40,15 +40,17 @@ describe('switchOn', () => {
     });
 
     describe('electrify', () => {
-        const bulb = {
+        test('electrify gets called', () => {
+            const bulb = {
             shelfLife: 5,
             isWorking: true,
             electrify: jest.fn()//test-doubles: stub
-        };
-        const lamp = new Lamp(bulb);
-        lamp.switchOn();
-        //test-doubles: spy
+            };
+            const lamp = new Lamp(bulb);
+            lamp.switchOn();
+            //test-doubles: spy
         expect(bulb.electrify).toHaveBeenCalled();
+        })
     });
 });
 
@@ -58,7 +60,7 @@ describe('switchOff', () => {
         lamp.isOn = true;
         lamp.switchOff();
         expect(lamp.isOn).toBe(false);
-    });
-})
+    })
+});
 
 
