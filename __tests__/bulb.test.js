@@ -1,5 +1,4 @@
 const Bulb = require('../src/bulb.js');
-//const Lamp = require('../src/lamp.js');
 
 const lamp = {
     bulb: new Bulb(),
